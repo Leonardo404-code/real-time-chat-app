@@ -21,7 +21,7 @@ var (
 	space   = []byte{' '}
 )
 
-// Client is a middleman between the websocket connection and the room.
+// User is a middleman between the websocket connection and the room.
 type User struct {
 	room *Room
 

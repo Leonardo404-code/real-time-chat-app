@@ -1,6 +1,6 @@
 package controllers
 
-// Room maintains the set of active clients and broadcasts messages to the clients.
+// Room maintains the set of active users and broadcasts messages to the users.
 type Room struct {
 	users map[*User]bool
 

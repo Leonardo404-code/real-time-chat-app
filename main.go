@@ -12,6 +12,8 @@ func main() {
 
 	go room.Run()
 
+	http.Handle("/", http.FileServer(http.Dir("./static")))
+
 	http.HandleFunc("/ws", func(rw http.ResponseWriter, r *http.Request) {
 		controllers.Server(room, rw, r)
 	})
