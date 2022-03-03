@@ -2,17 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles.css" />
     <title>Chat Real-time</title>
   </head>
   <body>
+    <div id="user" class="user-modal">
+      <form class="form">
+        <p>Adicione seu nome de usuário</p>
+        <input type="text" id="username" />
+        <p>Ou</p>
+        <p class="new-client" id="newClient">Entrar como cliente</p>
+        <button class="add-user-button" id="addUser" type="submit">
+          Adicionar usuário
+        </button>
+      </form>
+    </div>
+
     <div id="chat" class="chat"></div>
 
     <div class="message-container">
       <input type="text" class="input-message" id="messages" />
-      <button type="button" class="send-button" id="send">Enviar</button>
+      <button type="button" class="send-button" id="send">
+        <svg
+          width="61"
+          height="53"
+          viewBox="0 0 61 53"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M58.9556 28.1499C59.293 28.0054 59.5806 27.7651 59.7826 27.4587C59.9847 27.1524 60.0924 26.7934 60.0924 26.4264C60.0924 26.0594 59.9847 25.7005 59.7826 25.3941C59.5806 25.0877 59.293 24.8474 58.9556 24.7029L4.954 1.56009L4.95135 1.55744L3.27556 0.836218C2.95802 0.699766 2.60893 0.653743 2.26687 0.703232C1.92481 0.752721 1.60308 0.895797 1.33723 1.11665C1.07138 1.33751 0.87175 1.62755 0.760391 1.95475C0.649032 2.28194 0.630279 2.63354 0.706204 2.97072L1.10394 4.74727L1.10129 4.75522L5.91916 26.4264L1.10128 48.0976L1.10128 48.1082L0.70355 49.8847C0.628844 50.2216 0.648513 50.5724 0.760391 50.8988C0.872269 51.2251 1.07202 51.5143 1.33766 51.7344C1.60329 51.9545 1.92451 52.0971 2.26596 52.1464C2.6074 52.1958 2.95584 52.1499 3.27291 52.0139L58.9556 28.1499V28.1499ZM49.0839 28.3011L53.4563 26.4264L49.0839 24.5518L9.34233 24.5518L9.66847 26.0181C9.72848 26.287 9.72848 26.5658 9.66847 26.8348L9.34233 28.3011L49.0839 28.3011V28.3011Z"
+            fill="white"
+          />
+        </svg>
+      </button>
     </div>
 
     <script type="module" src="assets/index.js"></script>
