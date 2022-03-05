@@ -5,7 +5,7 @@ const userModal = document.querySelector("#user");
 const usernameInput = document.querySelector("#username");
 const addUserButton = document.querySelector("#addUser");
 const addUserClient = document.querySelector("#newClient");
-const username = localStorage.getItem("user");
+const username = sessionStorage.getItem("user");
 
 const insertMessage = (msg, chat) => {
   const message = document.createElement("p");
@@ -26,9 +26,10 @@ const Connect = (username) => {
     socket.send(`${username} Entrou`);
   };
 
-  socket.onclose = () => {
-    socket.send("Client Closed!");
-  };
+  socket.addEventListener("close", () => {
+    socket.send(`${username} Saiu`, chat);
+    insertMessage(`${username} Saiu`, chat);
+  });
 
   socket.onerror = (error) => {
     console.log("Socket Error: ", error);
@@ -65,18 +66,18 @@ if (username === null) {
     const value = usernameInput.value;
 
     if (e.keyCode === 13) {
-      localStorage.setItem("user", value);
+      sessionStorage.setItem("user", value);
       userModal.style.display = "none";
       Connect(value);
     }
 
-    localStorage.setItem("user", value);
+    sessionStorage.setItem("user", value);
     userModal.style.display = "none";
     Connect(value);
   });
 
   addUserClient.addEventListener("click", () => {
-    localStorage.setItem("user", "Usuário");
+    sessionStorage.setItem("user", "Usuário");
     userModal.style.display = "none";
     Connect("Usuário");
   });
