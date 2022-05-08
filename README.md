@@ -1,6 +1,6 @@
 # Real time chat app
 
-[real_time_video_example.mp4](public/real_time_video_example.mp4)
+https://user-images.githubusercontent.com/67703377/167297669-20cd301a-c64f-42f2-9bd0-0ccbb4d3d2ac.mp4
 
 ## How it works
 
