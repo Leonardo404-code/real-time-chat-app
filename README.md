@@ -1,6 +1,6 @@
 # Real time chat app
 
-https://user-images.githubusercontent.com/67703377/167297669-20cd301a-c64f-42f2-9bd0-0ccbb4d3d2ac.mp4
+https://user-images.githubusercontent.com/67703377/169322962-3a572be1-0ef9-4798-9b34-94ed73960560.mp4
 
 ## How it works
 
